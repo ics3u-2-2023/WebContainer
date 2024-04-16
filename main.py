@@ -2,34 +2,50 @@
 """
 Created by: Mr. Coxall
 Created on: Sep 2020
-This module checks a student's grade
+This module uses user defined functions
 """
 
 
-def main() -> None:
-    """The main() function checks a student's grade, returns None."""
+def calculate_area() -> None:
+    """The calculate_area() function calculates area of a rectangle, returns None."""
 
     # input
-    grade = input("Enter grade mark as a single character(ex: A, B, ...): ")
+    length = int(input("Enter the length of a rectangle (cm): "))
+    width = int(input("Enter the width of a rectangle (cm): "))
 
-    # process & output
-    # NOTE: This will only work on >= Python 3.10
-    match grade.upper():
-        case "A":
-            print("Excellent!")
-        case "B":
-            print("Good job!")
-        case "C":
-            print("Average.")
-        case "D":
-            print("Poor.")
-        case "F":
-            print("Fail.")
-        case _:
-            print("Invalid grade.")
+    # process
+    area = length * width
+
+    # output
+    print(f"The area is {area} cm²")
+    print("")
+
+
+def calculate_perimeter() -> None:
+    """The calculate_perimeter() function calculates perimeter of a rectangle, returns None."""
+
+    # input
+    length = int(input("Enter the length of a rectangle (cm): "))
+    width = int(input("Enter the width of a rectangle (cm): "))
+
+    # process
+    perimeter = 2 * (length + width)
+
+    # output
+    print(f"The perimeter is {perimeter} cm")
+    print("")
+
+
+def main() -> None:
+    """The main() function just calls other functions, returns None."""
+
+    # call functions
+    calculate_area()
+    calculate_perimeter()
 
     print("\nDone.")
 
 
 if __name__ == "__main__":
     main()
+ 
